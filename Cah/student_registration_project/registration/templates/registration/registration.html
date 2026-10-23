@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+</head>
+<body>
+    <h1>Student Registration</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Student ID:</label>
+        <input type="text" name="student_id" required>
+        <br><br>
+
+        <label>First Name:</label>
+        <input type="text" name="first_name" required>
+        <br><br>
+
+        <label>Last Name:</label>
+        <input type="text" name="last_name" required>
+        <br><br>
+
+        <label>Gender:</label>
+        <select name="gender" required>
+            <option value="">-- Select Gender --</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="date_of_birth" required>
+        <br><br>
+
+        <label>Contact No.:</label>
+        <input type="text" name="contact_no" required>
+        <br><br>
+
+        <button type="submit">Register Student</button>
+    </form>
+
+    <br>
+    <a href="{% url 'landing' %}">Back to Landing Page</a>
+</body>
+</html>-

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+
+    {% if show_message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    <a href="{% url 'landing' %}">
+        Back to Landing Page
+    </a>
+    <br><br>
+
+    <a href="{% url 'student_registration' %}">
+        Register a Student
+    </a>
+</body>
+</html>
