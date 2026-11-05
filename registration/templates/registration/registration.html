@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration</title>
+<link rel="stylesheet" href="{% static 'registration/style.css' %}">
+</head>
+<body>
+<h1>Student Registration</h1>
+<p><a href="{% url 'student_list' %}">View Student Directory</a></p>
+{% if form.errors %}
+<p>Please correct the errors below.</p>
+{{ form.errors }}
+{% endif %}
+<form method="post">
+{% csrf_token %}
+<label>Student ID:</label>
+{{ form.student_id }}
+<br><br>
+<label>First Name:</label>
+{{ form.first_name }}
+<br><br>
+<label>Last Name:</label>
+{{ form.last_name }}
+<br><br>
+<label>Gender:</label>
+{{ form.gender }}
+<br><br>
+<label>Date of Birth:</label>
+{{ form.date_of_birth }}
+<br><br>
+<label>Contact Number:</label>
+{{ form.contact_number }}
+<br><br>
+<button type="submit">Register Student</button>
+</form>
+</body>
+</html>

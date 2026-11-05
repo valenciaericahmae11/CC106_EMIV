@@ -1,0 +1,63 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="{% static 'registration/style.css' %}">
+</head>
+<body>
+
+    <h1>Student Details</h1>
+
+    <p>
+        <strong>Student ID:</strong>
+        {{ student.student_id }}
+    </p>
+
+    <p>
+        <strong>First Name:</strong>
+        {{ student.first_name }}
+    </p>
+
+    <p>
+        <strong>Last Name:</strong>
+        {{ student.last_name }}
+    </p>
+
+    <p>
+        <strong>Gender:</strong>
+        {{ student.gender }}
+    </p>
+
+    <p>
+        <strong>Date of Birth:</strong>
+        {{ student.date_of_birth }}
+    </p>
+
+    <p>
+        <strong>Contact Number:</strong>
+        {{ student.contact_number }}
+    </p>
+
+    <p>
+        <a href="{% url 'student_update' student.pk %}">
+            Edit Record
+        </a>
+
+        |
+
+        <a href="{% url 'student_delete' student.pk %}">
+            Delete Record
+        </a>
+
+        |
+
+        <a href="{% url 'student_list' %}">
+            Back to Directory
+        </a>
+    </p>
+
+</body>
+</html>
