@@ -47,3 +47,184 @@ input, select {
     padding: 8px;
     margin: 4px 0;
 }
+
+/* MODULE 09: Dashboard layout */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: #0b2d5c;
+    color: #ffffff;
+    padding: 22px;
+    border-radius: 10px;
+}
+
+.dashboard-header h1 {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.dashboard-header p {
+    margin: 5px 0;
+}
+
+.dashboard-header button {
+    background: #ffffff;
+    color: #0b2d5c;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.dashboard-actions {
+    margin: 20px 0;
+}
+
+.directory-link {
+    display: inline-block;
+    background: #1f5d91;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.summary-card {
+    background: #ffffff;
+    border-left: 5px solid #1f5d91;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(20, 40, 70, 0.08);
+}
+
+.summary-card h2 {
+    font-size: 16px;
+    margin: 0 0 12px;
+}
+
+.summary-number {
+    color: #0b2d5c;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.male-card {
+    border-left-color: #2878b8;
+}
+
+.female-card {
+    border-left-color: #a45b9a;
+}
+
+.report-section {
+    background: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(20, 40, 70, 0.06);
+}
+
+.report-section h2 {
+    color: #0b2d5c;
+    margin-top: 0;
+}
+
+.gender-row {
+    margin: 16px 0;
+}
+
+.gender-label {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 7px;
+}
+
+.bar-track {
+    height: 14px;
+    background: #e8edf3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.male-bar {
+    background: #2878b8;
+}
+
+.female-bar {
+    background: #a45b9a;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.search-form label {
+    width: 100%;
+    font-weight: bold;
+}
+
+.search-form input {
+    min-width: 220px;
+    flex: 1;
+}
+
+.clear-search {
+    padding: 8px 10px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-wrapper table {
+    min-width: 700px;
+}
+
+.empty-message {
+    text-align: center;
+    color: #667085;
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
+    body {
+        margin: 14px;
+    }
+
+    .dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .report-section {
+        padding: 14px;
+    }
+}
